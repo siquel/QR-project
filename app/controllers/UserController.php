@@ -73,7 +73,7 @@ class UserController extends \BaseController {
 	public function update($id)
 	{
 		$user = User::find($id);
-
+		// we need to skip validation for username
 		$validator = Validator::make($data = Input::all(), User::rules($user->id));
 
 		if ($validator->fails())

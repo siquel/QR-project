@@ -1,7 +1,3 @@
-{{ Form::label('username', 'Username')}}
-{{ Form::text('username', null, array('hidden')) }}
-{{ $errors->first('username', '<p class="error">:message</p>')  }}
-
 {{ Form::label('firstname', 'First name') }}
 {{ Form::text('firstname') }}
 {{ $errors->first('firstname', '<p class="error">:message</p>') }}

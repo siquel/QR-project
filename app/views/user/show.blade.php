@@ -2,5 +2,5 @@
 
 @section('content')
 	<h2>Im so leet</h2>
-	<p>{{{ $user->email }}}</p>
+	<p>{{{ $user->firstname }}}</p>
 @stop

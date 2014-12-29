@@ -1,7 +1,9 @@
 @extends('layouts.default')
 
 @section('content')
-	@foreach($users as $user)
-		<p>{{{ $user->email }}}</p>
-	@endforeach
+            @if(count($users))
+	   @foreach($users as $user)
+	               <p>{{{ $user->firstname }}}</p>
+	   @endforeach
+            @endif
 @stop

@@ -9,13 +9,7 @@ class UserController extends \BaseController {
 	 */
 	public function index()
 	{
-		$users = array();
-		for ($i=1; $i < 4; $i++) { 
-			$user = new Stdclass;
-			$user->email = "user@jeesus.com";
-			$user->password = Hash::make("Password{$i}");
-			$users[] = $user;
-		}
+		$users = DB::table('users')->get();
 
 		return View::make('user.index', compact('users'));
 	}
@@ -51,9 +45,7 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$user = new Stdclass;
-		$user->email = "user@jeesus.com";
-		$user->password = Hash::make("Password");
+		$user = DB::table('users')->where('id', $id)->first();
 		return View::make('user.show', compact('user'));
 	}
 

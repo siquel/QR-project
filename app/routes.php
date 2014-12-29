@@ -10,14 +10,15 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-Route::resource('user', 'UserController');
-Route::resource('event', 'EventController');
-Route::get('/', function()
-{
-	return View::make('index');
-});
+
 Route::group(array('before' => 'auth'), function() {
 	Route::get('/dashboard', 'DashboardController@show');
+            Route::resource('user', 'UserController');
+            Route::resource('event', 'EventController');
+            Route::get('/', function()
+            {
+                return View::make('index');
+            });
 });
 
 Route::get('login', 'LoginController@show');

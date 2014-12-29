@@ -3,7 +3,7 @@
 @section('content')
         @if(count($events))
             @foreach($events as $event)
-                <strong>{{{$event->name}}}</strong>
+                <p><strong>{{{$event->name}}}</strong> By {{{ $event->user->username }}}</p>
             @endforeach
         @endif
 @stop

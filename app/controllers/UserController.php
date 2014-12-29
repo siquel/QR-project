@@ -9,7 +9,7 @@ class UserController extends \BaseController {
 	 */
 	public function index()
 	{
-		$users = DB::table('users')->get();
+		$users = User::all();
 
 		return View::make('user.index', compact('users'));
 	}

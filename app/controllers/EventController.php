@@ -9,7 +9,7 @@ class EventController extends \BaseController {
 	 */
 	public function index()
 	{
-		$events = MyEvent::all();
+		$events = MyEvent::with('user')->get();
 		return View::make('event.index', compact('events'));
 	}
 

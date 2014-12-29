@@ -58,7 +58,9 @@ class UserController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$user = User::find($id);
+
+		return View::make('user.edit', compact('user'));
 	}
 
 
@@ -70,7 +72,17 @@ class UserController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$user = User::find($id);
+
+		$validator = Validator::make($data = Input::all(), User::rules($user->id));
+
+		if ($validator->fails())
+		{
+			return Redirect::back()->withErrors($validator)->withInput();
+		}
+
+		$user->update($data);
+		return Redirect::route("user.show", $user->id);
 	}
 
 

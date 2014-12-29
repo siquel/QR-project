@@ -21,4 +21,5 @@ Route::group(array('before' => 'auth'), function() {
 });
 
 Route::get('login', 'LoginController@show');
+Route::post('login', array('as' => 'login', 'uses' => 'LoginController@login'));
 

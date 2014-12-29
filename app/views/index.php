@@ -1,1 +1,5 @@
-<h2>Index</h2>
+extends('layouts.default')
+@section('content')
+
+
+@stop

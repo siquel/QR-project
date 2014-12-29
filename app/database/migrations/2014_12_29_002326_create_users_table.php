@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration {
 			$table->string('surname');
 			$table->string('username')->unique();
 			$table->string('password', 60); // bcrypt 60 always
+			$table->string('remember_token', 100)->nullable();
 			$table->timestamps();
 		});
 	}

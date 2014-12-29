@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventTable extends Migration {
+class CreateEventsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -16,7 +16,7 @@ class CreateEventTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
-			$table->integer('created_by')->unsigned();
+			$table->integer('user_id')->unsigned();
 			$table->timestamps();
 		});
 	}

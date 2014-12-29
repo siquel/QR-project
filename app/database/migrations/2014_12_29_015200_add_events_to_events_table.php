@@ -15,7 +15,7 @@ class AddEventsToEventsTable extends Migration {
 		DB::table('events')->insert(
 				array(
 					'name' => 'Unisateen häät',
-					'created_by' => 1
+					'user_id' => 1
 					)
 			);
 	}

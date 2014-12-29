@@ -45,7 +45,7 @@ class UserController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$user = DB::table('users')->where('id', $id)->first();
+		$user = User::find($id);
 		return View::make('user.show', compact('user'));
 	}
 

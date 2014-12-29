@@ -11,6 +11,7 @@
 |
 */
 Route::resource('user', 'UserController');
+Route::resource('event', 'EventController');
 Route::get('/', function()
 {
 	return View::make('index');

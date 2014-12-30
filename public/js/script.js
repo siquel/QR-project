@@ -6,4 +6,6 @@ $(function() {
     $('#side_open').on('click', function() {
         $('#sub_menu').toggleClass('sub_open');
     });
+
+    $('#calendar').fullCalendar({});
 });

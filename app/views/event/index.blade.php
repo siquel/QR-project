@@ -33,6 +33,8 @@
                     </a>
                 </div>
             </div>
-            <div id="nodes">wp</div>
+            <div>
+                <div id="calendar"></div>
+            </div>
         </div>
 @stop

@@ -78,7 +78,7 @@ body #header_open {
   font-size: 30px;
   float: left; }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 460px) {
   #header a, #header_open {
     width: 100%;
     clear: both;

@@ -1,35 +1,30 @@
-@extends('layouts.default')
-
-
-@section('content')
-
-<div id="header" class="cf">
-    <div class="page-full-width">
-        <div id="login-intro" class="float-left">
-            <h1 class="text-upper">Uskomaton login</h1>
-            <h5>Write your credentials below</h5>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    @include('partials.css')
+    @include('partials.js')
+    {{ HTML::style('css/signin.css') }}
+    <title>Sign in</title>
+    <!--[if lt IE 9]
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]]-->
+</head>
+<body id="signin">
+    <div id="login">
+        {{ Form::open(array('route' => 'login')) }}
+        <h1>Sign in</h1>
+        <div class="ui_form">
+            <span>.</span>
+            {{ Form::text('username') }}
         </div>
+        <div class="ui_form">
+            <span>w</span>
+            {{ Form::password('password') }}
+        </div>
+        {{ Form::submit('Login') }}
+        {{ Form::close() }}
     </div>
-</div>
-<div id="container">
-    {{ Form::open(array('route' => 'login', 'id' => 'login-form' )) }}
-        <fieldset>
-            <p>
-                {{ Form::label('username', 'Username') }}
-                {{ Form::text('username', null, array('class' => 'round', 'autofocus', 'required')) }}
-            </p>
-            <p>
-                {{ Form::label('password', 'Password') }}
-                {{ Form::password('password', array('class' => 'round', 'required')) }}
-
-            </p>
-            <p>
-                Lost <a href="#">password?</a>
-            </p>
-            {{ Form::submit('Login', array('class' => 'button text-upper round dark-gray')) }}
-        </fieldset>
-    {{ Form::close() }}
-</div>
-
-
-@stop
+</body>
+</html>

@@ -7,6 +7,9 @@ body {
   font-size: 16px;
   color: #4f3b3b; }
 
+a {
+  text-decoration: none; }
+
 @font-face {
   font-family: 'liga';
   src: url("../font/websymbolsligaregular-webfont-webfont.eot");
@@ -15,5 +18,48 @@ body {
   font-style: normal; }
 #signin {
   background: #f4d37a; }
+
+#login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 240px;
+  height: 180px;
+  margin-left: -120px;
+  margin-top: -90px; }
+
+#login h1 {
+  padding: 0;
+  margin: 5px 0 15px 0;
+  line-height: 100%;
+  font-size: 24px;
+  font-weight: 200;
+  text-align: center; }
+
+#login .mt {
+  margin-top: 15px; }
+
+#login input[type="submit"] {
+  padding: 10px 20px;
+  display: inline-block;
+  float: right;
+  background: #FFF;
+  font-size: 15px;
+  color: #4f3b3b;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+#login input[type="submit"]:hover {
+  background: #cd9c50;
+  color: #fff; }
 
 /*# sourceMappingURL=signin.css.map */

@@ -54,6 +54,10 @@ body{
 	color: $textOne;
 }
 
+a {
+    text-decoration: none;
+}
+
 @font-face {
     font-family: 'liga';
     src: url('../font/websymbolsligaregular-webfont-webfont.eot');

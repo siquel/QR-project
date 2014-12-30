@@ -19,7 +19,7 @@
             <span>.</span>
             {{ Form::text('username') }}
         </div>
-        <div class="ui_form">
+        <div class="ui_form mt">
             <span>w</span>
             {{ Form::password('password') }}
         </div>

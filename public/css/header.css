@@ -16,15 +16,18 @@ a {
   src: url("../font/websymbolsligaregular-webfont-webfont.eot?#iefix") format("embedded-opentype"), url("../font/websymbolsligaregular-webfont-webfont.woff") format("woff"), url("../font/websymbolsligaregular-webfont-webfont.ttf") format("truetype"), url("../font/websymbolsligaregular-webfont-webfont.svg#web_symbols_ligaregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-#header_open {
-  display: none; }
+/*hax */
+body #header_open {
+  display: none;
+  background: #4f3b3b;
+  text-align: center; }
 
 #header {
   float: left;
   width: 100%;
   background: #4f3b3b; }
 
-#header a {
+#header a, #header_open {
   display: inline-block;
   float: left;
   padding: 0 15px;
@@ -47,7 +50,7 @@ a {
   font-family: "liga";
   padding-right: 7px; }
 
-#header a:hover {
+#header a:hover, body #header_open:hover {
   background: #f4d37a;
   color: #4f3b3b; }
 
@@ -69,5 +72,37 @@ a {
   -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); }
+
+#header_open span {
+  font-family: "liga";
+  font-size: 30px;
+  float: left; }
+
+@media screen and (max-width: 440px) {
+  #header a, #header_open {
+    width: 100%;
+    clear: both;
+    border-bottom: 1px solid #361c12;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  #header a:last-child, #header a:first-child {
+    float: left;
+    padding: 0 15px; }
+
+  #header span {
+    display: inline-block;
+    width: 20px;
+    text-align: center; }
+
+  body #header_open {
+    display: block; }
+
+  #header.open {
+    display: block; }
+
+  #header {
+    display: none; } }
 
 /*# sourceMappingURL=header.css.map */

@@ -24,12 +24,7 @@
 	margin-left: 0;
 }
 .ui_navlist span{
-	float: right;
-	width: 20px;
-	margin-right: -20px;
 	font-family: "liga";
-	color: $yellow;
-	text-indent: -6px;
 }
 .ui_navlist div a{
 	display: block;
@@ -97,17 +92,15 @@
 }
 .ui_searchlist{
 	float: left;
-	max-width: 320px;
 	width: 100%;
 	background:$cream;
-	@include boxShadow(1px 1px 2px rgba(0,0,0,.55));
 }
 .ui_searchlist>span{
 	margin: 0 20px;
 	line-height: 47px;
 	text-align: center;
 	font-family: "liga";
-	font-size:20px;
+	font-size:15px;
 	color:$textOne;
 }
 .ui_searchlist>span:first-child{
@@ -126,7 +119,7 @@
 	line-height: 47px;
 	border:none;
 	background:transparent;
-	font-size:16px;
+	font-size:15px;
 	color: $textOne;
 	outline:none;
 }

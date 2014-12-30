@@ -1,0 +1,27 @@
+@import 'Import';
+
+.ui_navlist a {
+    color: $yellow;
+}
+
+.ui_navlist a:hover em {
+    color: $textOne;
+}
+
+
+#events body {
+    height: 50px;
+}
+
+#events #menu_side {
+    width: 230px;
+    background: $cream;
+}
+
+#events #sub_menu > span {
+    position: absolute;
+    margin-left: 10px;
+    line-height: 59px;
+    font-family: "liga";
+    font-size: 20px;
+}

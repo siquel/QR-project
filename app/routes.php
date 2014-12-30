@@ -14,7 +14,7 @@
 Route::group(array('before' => 'auth'), function() {
 	Route::get('/dashboard', 'DashboardController@show');
 
-            Route::resource('event', 'EventController');
+
             Route::get('/', function()
             {
                 return View::make('index');
@@ -23,4 +23,5 @@ Route::group(array('before' => 'auth'), function() {
 Route::resource('user', 'UserController');
 Route::get('login', 'LoginController@show');
 Route::post('login', array('as' => 'login', 'uses' => 'LoginController@login'));
+Route::resource('event', 'EventController');
 

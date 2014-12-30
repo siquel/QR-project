@@ -1,12 +1,38 @@
-@extends('layouts.default')
+@extends('event._layouts.event')
 
 @section('content')
-        @if(count($events))
-            @foreach($events as $event)
-                <p><strong>{{{$event->name}}}</strong> By {{{ $event->user->username }}}</p>
-                @foreach($event->questions as $q)
-                    <li>{{{ $q->question }}}</li>
-                @endforeach
-            @endforeach
-        @endif
+        <div id="colTwo">
+            <div id="menu_side">
+                <a href="#" id="side_open"><span>;</span>Event feed</a>
+                <div id="sub_menu" class="">
+                    <span>#</span>
+                    <input type="text" value="" />
+                    <a href="#">
+                        <strong>Title 13:33:3333</strong>
+                        Lorem ipsum dolor sit amet, consectetur.
+                    </a>
+                    <a href="#">
+                        <strong>Title 13:33:3333</strong>
+                        Lorem ipsum dolor sit amet, consectetur.
+                    </a>
+                    <a href="#">
+                        <strong>Title 13:33:3333</strong>
+                        Lorem ipsum dolor sit amet, consectetur.
+                    </a>
+                    <a href="#">
+                        <strong>Title 13:33:3333</strong>
+                        Lorem ipsum dolor sit amet, consectetur.
+                    </a>
+                    <a href="#">
+                        <strong>Title 13:33:3333</strong>
+                        Lorem ipsum dolor sit amet, consectetur.
+                    </a>
+                    <a href="#">
+                        <strong>Title 13:33:3333</strong>
+                        Lorem ipsum dolor sit amet, consectetur.
+                    </a>
+                </div>
+            </div>
+            <div id="nodes">wp</div>
+        </div>
 @stop

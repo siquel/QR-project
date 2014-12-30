@@ -25,3 +25,47 @@
     font-family: "liga";
     font-size: 20px;
 }
+
+#events #sub_menu input {
+    width: 100%;
+    margin: 0;
+    padding: 0 10px 0 40px;
+    line-height: 59px;
+    border: none;
+    border-right: 1px solid $lightGray;
+    border-bottom: 1px solid $lightGray;
+    font-size: 15px;
+    background: transparent;
+    outline: none;
+    color: $textOne;
+    @include boxSizing();
+}
+
+#events #sub_menu a {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    color: $textOne;
+    font-size: 14px;
+    line-height: 150%;
+    border-bottom: 1px solid $lightGray;
+    @include boxSizing();
+    @include transition(all .3s);
+}
+
+#events #sub_menu a:hover {
+    background: $brown;
+    color: $textTwo;
+}
+
+#events #sub_menu a strong {
+    display: block;
+    clear: both;
+}
+
+@media screen and (max-width: 900px) {
+    #events #sub_menu span {
+        margin-top: 50px;
+        left:0; // mozilla fix?
+    }
+}

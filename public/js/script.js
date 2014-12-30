@@ -16,6 +16,7 @@ $(function() {
             left: 'prev',
             center: 'title',
             right: 'next'
-        }
+        },
+        firstDay: 1 // monday
     });
 });

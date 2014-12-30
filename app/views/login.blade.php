@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     @include('partials.css')
-    @include('partials.js')
     {{ HTML::style('css/signin.css') }}
     <title>Sign in</title>
     <!--[if lt IE 9]
@@ -26,5 +25,6 @@
         {{ Form::submit('Login') }}
         {{ Form::close() }}
     </div>
+    @include('partials.js')
 </body>
 </html>

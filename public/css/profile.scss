@@ -1,0 +1,111 @@
+@import 'Import';
+
+#profile {
+    background: $cream;
+    color: $textThree;
+}
+
+#profile_header {
+    float: left;
+    background: #fff;
+}
+
+#profile_header > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#header_txt {
+    padding: 0 70px;
+}
+
+#header_txt * {
+    margin: 0;
+    padding: 0;
+    line-height: 37px;
+}
+
+#header_txt h1 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#header_txt strong {
+    font-size: 12px;
+}
+
+#header_txt p {
+    font-size: 14px;
+}
+
+#profile_main {
+    width: 100%;
+    background: $lightGray;
+    float:left;
+}
+
+#profile_main > div {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%;
+}
+
+#left {
+    padding: 30px;
+}
+
+#left h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#left p {
+    margin: 0;
+    padding: 15px 0 0 0;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+#right {
+    background: $brown;
+}
+
+
+@media screen and (max-width:768px) {
+    #header_txt {
+        padding: 0 30px;
+    }
+
+    #header_txt * {
+        line-height: 30px;
+    }
+
+    #profile_main > div {
+        display: block;
+        float: left;
+        width: 100%;
+        @include boxSizing();
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #profile_header div {
+        display: block;
+
+    }
+
+    #profile_header div:first-child {
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        margin: 30px auto 0 auto;
+
+    }
+
+    #header_txt {
+        padding: 30px;
+    }
+}

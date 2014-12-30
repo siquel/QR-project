@@ -13,14 +13,14 @@
 
 Route::group(array('before' => 'auth'), function() {
 	Route::get('/dashboard', 'DashboardController@show');
-            Route::resource('user', 'UserController');
+
             Route::resource('event', 'EventController');
             Route::get('/', function()
             {
                 return View::make('index');
             });
 });
-
+Route::resource('user', 'UserController');
 Route::get('login', 'LoginController@show');
 Route::post('login', array('as' => 'login', 'uses' => 'LoginController@login'));
 

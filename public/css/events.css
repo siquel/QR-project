@@ -144,9 +144,10 @@ a {
   background: #f0e9dd;
   border-collapse: collapse; }
 
-.fc-header * {
+.fc-header *, .fc-content * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  border-collapse: collapse; }
 
 .fc-header h2 {
   text-align: center;
@@ -169,6 +170,30 @@ a {
 .fc-button-prev.fc-state-hover, .fc-button-next.fc-state-hover {
   cursor: pointer;
   color: #e56655; }
+
+.fc-content {
+  -moz-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.2); }
+
+.fc-content thead {
+  line-height: 40px;
+  font-size: 12px;
+  background: #f4d37a;
+  color: #4f3b3b; }
+
+.fc-content td {
+  border-left: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  vertical-align: top; }
+
+.fc-day-number {
+  padding: 10px;
+  color: #686767;
+  font-size: 15px; }
+
+.fc-other-month .fc-day-number {
+  color: #ddd; }
 
 @media screen and (max-width: 900px) {
   #events #sub_menu span {

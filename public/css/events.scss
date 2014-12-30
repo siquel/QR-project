@@ -71,9 +71,10 @@
     border-collapse: collapse;
 }
 
-.fc-header *{
+.fc-header *, .fc-content *{
     margin: 0;
     padding: 0;
+    border-collapse: collapse;
 }
 
 .fc-header h2 {
@@ -97,6 +98,36 @@
 .fc-button-prev.fc-state-hover, .fc-button-next.fc-state-hover {
     cursor: pointer;
     color: $red;
+}
+
+// calendar content
+
+.fc-content {
+    @include boxShadow(-1px -1px 3px rgba(0,0,0, .2));
+}
+
+.fc-content thead {
+    line-height: 40px;
+    font-size: 12px;
+    background: $yellow;
+    color: $textOne;
+}
+
+// dates
+.fc-content td {
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+}
+
+.fc-day-number {
+    padding: 10px;
+    color: $textThree;
+    font-size: 15px;
+}
+
+.fc-other-month .fc-day-number {
+    color: #ddd;
 }
 
 @media screen and (max-width: 900px) {

@@ -13,6 +13,7 @@
 <body id="signin">
     <div id="login">
         {{ Form::open(array('route' => 'login')) }}
+        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         <h1>Sign in</h1>
         <div class="ui_form">
             <span>.</span>

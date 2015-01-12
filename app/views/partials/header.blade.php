@@ -3,5 +3,5 @@
     <a href="#"><span>@</span>Home</a>
     <a href="#"><span>.</span>Profile</a>
     <a href="#"><span>;</span><em>1</em>Events</a>
-    <a href="#"><span>,</span>Logout</a>
+    <a href="{{ URL::to('logout') }}"><span>,</span>Logout</a>
 </div>

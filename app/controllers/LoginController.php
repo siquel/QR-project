@@ -7,8 +7,19 @@ class LoginController extends BaseController {
 	   return View::make('login');
 	}
 
-            public function login()
-            {
-                dd(Input::all());
-            }
-}
+    public function login()
+    {
+        if (Auth::attempt(array('username' => Input::get('username'), 'password' => Input::get('password')))) {
+        	return Redirect::to('dashboard');
+        } else {
+        	return Redirect::to('login')
+        		->with('message', 'Your username/password combination was incorrect')
+        		->withInput();
+        }
+    }
+
+    public function logout() {
+    	Auth::logout();
+    	return Redirect::to('login');
+    }
+} 

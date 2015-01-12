@@ -13,15 +13,16 @@
 
 Route::group(array('before' => 'auth'), function() {
 	Route::get('/dashboard', 'DashboardController@show');
-
-
-            Route::get('/', function()
-            {
-                return View::make('index');
-            });
+	Route::resource('user', 'UserController');
+	Route::resource('event', 'EventController');
+	Route::get('logout', array('as' => 'logout', 'uses' => 'LoginController@logout'));
+    Route::get('/', function()
+    {
+        return View::make('index');
+    });
 });
-Route::resource('user', 'UserController');
+
 Route::get('login', 'LoginController@show');
-Route::post('login', array('as' => 'login', 'uses' => 'LoginController@login'));
-Route::resource('event', 'EventController');
+Route::post('login', array('before' => 'csrf', 'as' => 'login', 'uses' => 'LoginController@login'));
+
 

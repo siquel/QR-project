@@ -10,7 +10,7 @@ class LoginController extends BaseController {
     public function login()
     {
         if (Auth::attempt(array('username' => Input::get('username'), 'password' => Input::get('password')))) {
-        	return Redirect::to('dashboard');
+        	return Redirect::to('event.index');
         } else {
         	return Redirect::to('login')
         		->with('message', 'Your username/password combination was incorrect')

@@ -12,7 +12,7 @@
 */
 
 Route::group(array('before' => 'auth'), function() {
-	Route::get('/dashboard', 'DashboardController@show');
+	//Route::get('/dashboard', 'DashboardController@show');
 	Route::resource('user', 'UserController');
 	Route::resource('event', 'EventController');
 	Route::get('logout', array('as' => 'logout', 'uses' => 'LoginController@logout'));

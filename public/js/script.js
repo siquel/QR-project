@@ -20,12 +20,13 @@ $(function() {
                 center: 'title',
                 right: 'next'
             },
+            timezone: 'local',
             firstDay: 1, // monday
             eventDataTransform: function(data) {
                 return data;
             },
             events: {
-                    url: 'api/events.php',
+                    url: 'api/events',
                     type: 'GET',
                     dataType: "json",
                     complete: function (data, status, wtf) {
@@ -44,7 +45,10 @@ $(function() {
             var curYear = cal.fullCalendar('getDate').getFullYear();
             var monthStr = curMonth.toString().length == 2 ? curMonth : '0'+curMonth;
             var found = $.grep(file, function(obj) {
-                return obj.menu === ""+curMonth+curYear+"";
+                var m = obj.start.getMonth() + 1;
+                var y = obj.start.getFullYear();
+                console.log(y);
+                return ""+m+y+"" === ""+curMonth+curYear+"";
             });
 
             found.sort(function(a, b) {
@@ -52,8 +56,10 @@ $(function() {
             });
             $.each(found, function(i, obj) {
                 var date = obj.start.getDate();
+                console.log(date);
                 var dateStr = date.toString().length == 2 ? date : '0'+date;
-                $('#sub_menu').append('<a href="'+obj.url+'"><strong>'+obj.title+' '+dateStr+'-'+monthStr+'-'+curYear+'</strong>'+obj.description+'</a>');
+                var url = 'event/'+obj.id;
+                $('#sub_menu').append('<a href="'+url+'"><strong>'+obj.title+' '+dateStr+'-'+monthStr+'-'+curYear+'</strong>'+obj.description+'</a>');
             });
         }
 

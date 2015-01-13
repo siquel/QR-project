@@ -195,6 +195,27 @@ a {
 .fc-other-month .fc-day-number {
   color: #ddd; }
 
+.fc-event-container {
+  margin-top: -10px; }
+
+.fc-event-inner {
+  margin-top: 1px;
+  padding: 3px 5px;
+  font-size: 12px;
+  background: #cd9c50;
+  color: #fff;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+a.fc-event:hover .fc-event-inner {
+  background: #f4d37a;
+  color: #4f3b3b; }
+
 @media screen and (max-width: 900px) {
   #events #sub_menu span {
     margin-top: 50px;

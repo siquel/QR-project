@@ -7,7 +7,7 @@ $(function() {
         $('#sub_menu').toggleClass('sub_open');
     });
 
-    $('#calendar').fullCalendar({
+    var cal = $('#calendar').fullCalendar({
         buttonText: {
             prev: '&#210;',
             next: '&#213;'
@@ -18,5 +18,11 @@ $(function() {
             right: 'next'
         },
         firstDay: 1 // monday
+    });
+
+    var file;
+    $.getJSON('api/events.php', function(data) {
+        file = data;
+        cal.fullCalendar('addEventSource', data);
     });
 });

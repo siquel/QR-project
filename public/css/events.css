@@ -220,5 +220,8 @@ a.fc-event:hover .fc-event-inner {
   #events #sub_menu span {
     margin-top: 50px;
     left: 0; } }
+@media screen and (max-width: 650px) {
+  .fc-event-container {
+    margin-top: 1px; } }
 
 /*# sourceMappingURL=events.css.map */

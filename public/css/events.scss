@@ -153,3 +153,9 @@ a.fc-event:hover .fc-event-inner {
         left:0; // mozilla fix?
     }
 }
+// week view
+@media screen and (max-width: 650px) {
+    .fc-event-container {
+        margin-top: 1px;
+    }
+}

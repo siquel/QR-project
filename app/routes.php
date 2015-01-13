@@ -22,7 +22,7 @@ Route::group(array('before' => 'auth'), function() {
     });
 });
 
-Route::get('login', 'LoginController@show');
+Route::get('login', array('uses' => 'LoginController@show', 'as' => 'login.show'))->before('guest'); // don't allow login again
 Route::post('login', array('before' => 'csrf', 'as' => 'login', 'uses' => 'LoginController@login'));
 
 

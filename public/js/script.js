@@ -9,6 +9,7 @@ $(function() {
 
 
     if ($('html').attr('id') == 'events') {
+        var file = [];
         var cal = $('#calendar').fullCalendar({
             buttonText: {
                 prev: '&#210;',
@@ -19,7 +20,21 @@ $(function() {
                 center: 'title',
                 right: 'next'
             },
-            firstDay: 1 // monday
+            firstDay: 1, // monday
+            eventDataTransform: function(data) {
+                return data;
+            },
+            events: {
+                    url: 'api/events.php',
+                    type: 'GET',
+                    dataType: "json",
+                    complete: function (data, status, wtf) {
+                        file = cal.fullCalendar('clientEvents');
+                        $().getMenu();
+                        $().windowCheck();
+                    }
+            }
+            
         });
 
         $.fn.getMenu = function() {
@@ -35,7 +50,7 @@ $(function() {
             found.sort(function(a, b) {
                 return a.start.getDate() - b.start.getDate();
             });
-
+            console.log(found);
             $.each(found, function(i, obj) {
                 var date = obj.start.getDate();
                 var dateStr = date.toString().length == 2 ? date : '0'+date;
@@ -54,15 +69,9 @@ $(function() {
             }
         }
 
-        $(window).on('resize', function() {
-            $().windowCheck();
-        });
 
-        var file;
-        $.getJSON('api/events.php', function(data) {
-            file = data;
-            cal.fullCalendar('addEventSource', data);
-            $().getMenu();
+
+        $(window).on('resize', function() {
             $().windowCheck();
         });
 

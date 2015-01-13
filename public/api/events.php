@@ -1,3 +1,6 @@
+<?php
+header('Content-Type: application/json');
+?>
 [
 	{
 		"menu":"12015",

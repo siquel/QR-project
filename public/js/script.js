@@ -50,7 +50,6 @@ $(function() {
             found.sort(function(a, b) {
                 return a.start.getDate() - b.start.getDate();
             });
-            console.log(found);
             $.each(found, function(i, obj) {
                 var date = obj.start.getDate();
                 var dateStr = date.toString().length == 2 ? date : '0'+date;

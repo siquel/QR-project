@@ -15,7 +15,7 @@ class ApiController extends \BaseController {
 		$end = date("Y-m-d H:i:s", intval($end));
 		//$events = DB::table('events')->where('when', '>', $start); //->where('when', '<', $end);
 		$response = "";
-		$events = MyEvent::where('start', '>', $start)->orderBy('start')->get();
+		$events = MyEvent::where('start', '>', $start)->where('start', '<', $end)->orderBy('start')->get();
 
 		return Response::json(array($events));
 	}

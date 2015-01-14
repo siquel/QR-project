@@ -20,11 +20,11 @@ TODO
 * [ ] Teamin luonti
 * [ ] Teamiin liittyminen
 * [ ] Kalenterin ajax 
-* [ ] Eventtien renderöityminen sivupaneeliin (ajax?)
+* [x] Eventtien renderöityminen sivupaneeliin (ajax?)
 * [ ] Profiili (passun vaihto jne)
 * [ ] Eventtin haku (ajax?)
 * [ ] Permissions
-* [ ] JSON API (WIP)
+* [???] JSON API (WIP)
 
 To be continued..
 

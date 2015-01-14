@@ -8,7 +8,7 @@
 * Google SDK?
 
 ### Relaatiokanta
-TODO
+![Kanta](http://puu.sh/euB0n/1e2d82a706.png)
 
 ### TODO
 * [ ] Responsiivinen UI joka mahdollistaa puhelimella käytön ja PC:llä hallinan
@@ -20,11 +20,11 @@ TODO
 * [ ] Teamin luonti
 * [ ] Teamiin liittyminen
 * [ ] Kalenterin ajax 
-* [ ] Eventtien renderöityminen sivupaneeliin (ajax?)
+* [x] Eventtien renderöityminen sivupaneeliin (ajax?)
 * [ ] Profiili (passun vaihto jne)
 * [ ] Eventtin haku (ajax?)
 * [ ] Permissions
-* [ ] JSON API (WIP)
+* [???] JSON API (WIP)
 
 To be continued..
 

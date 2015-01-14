@@ -8,7 +8,7 @@
 * Google SDK?
 
 ### Relaatiokanta
-TODO
+![Kanta](http://puu.sh/euB0n/1e2d82a706.png)
 
 ### TODO
 * [ ] Responsiivinen UI joka mahdollistaa puhelimella käytön ja PC:llä hallinan

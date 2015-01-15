@@ -35,7 +35,7 @@ class QuestionController extends \BaseController {
 	public function show($id)
 	{
 		$question = Question::find($id);
-		return View::make('question.single', compact($question));
+		return View::make('question.single', compact('question'));
 	}
 
 	/**
@@ -48,7 +48,7 @@ class QuestionController extends \BaseController {
 	public function edit($id)
 	{
 		$question = Question::find($id);
-		return View::make('question.edit', compact($question));
+		return View::make('question.edit', compact('question'));
 	}
 
 	/**

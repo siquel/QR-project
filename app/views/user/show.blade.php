@@ -1,55 +1,51 @@
 @extends('user._layouts.profile')
 
 @section('content')
-    <div id="profile_header">
-        <div><img src="profile.png" alt="Persons Name"></div>
-        <div id="header_txt">
-            <h1>{{ $user->firstname }} {{ $user->surname }}</h1>
-            <strong>Tässä vois lukea userclass</strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex suscipit aliquam maiores, repellat unde necessitatibus voluptates aut dicta non tempore nostrum eveniet, fuga modi, laudantium libero delectus cum odio, error a. Ullam nostrum aperiam commodi blanditiis dolorum eius, rerum neque labore dolorem ut aliquid, quidem soluta. Harum unde, ipsa facilis.</p>
-        </div>
-        <div id="profile_main">
-            <div id="left">
-                <h2>Stuff</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam eius, fuga. Iure quo nulla, odio earum at ipsum neque, minima amet, libero eum, veritatis saepe!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil quis est tenetur nesciunt quam eos natus, soluta quod beatae officia, perspiciatis mollitia commodi asperiores dicta.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ea, animi culpa similique deleniti possimus!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, iure!</p>
+    <div class="content">
+        <div class="left">
+            <div class="content-header">
+                <div class="pull-right">
+                    <a class="button" href="{{ URL::action('user.edit', array('user' => Auth::user()->id )) }}"><span>&#0063;</span>Edit profile</a>
+                </div>
+                <h3>{{{ $user->username }}}</h3>
+                <span class="real-name">{{{ $user->firstname }}} {{{ $user->surname }}}</span>
+                <br/>
+                <small>Member since XX</small>
+                <div></div>
+                <h4>Teams:</h4>
+                <a href="#">Klux Klux Klan</a>
+                <hr>
             </div>
-            <div id="right">
-                <ul class="ui_navlist">
+            <div class="activity">
+                <h4>Activity:</h4>ööää
+            </div>
+        </div>
+        <div class="right">
+            <div class="panel">
+                <div class="panel-heading">Jeejee</div>
+                    <ul>
+                        <li>
+                            <span class="light">Member since</span>
+                            <strong>XX YY JEEJEE</strong>
+                        </li>
+                        <li>
+                            <span class="light">Mitä vittua tähä</span>
+                            <strong>dunno</strong>
+                        </li>
+                    </ul>
+            </div>
+            <div class="panel">
+                <div class="panel-heading">Kalja :D</div>
+                <ul>
                     <li>
-                        <a href="#">
-                            <img src="" alt="Kuvako"/>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam deleniti, aperiam nostrum magni iste inventore odit, quod! Ab inventore, pariatur. Repudiandae at maxime ipsam, deserunt deleniti facilis recusandae numquam quia modi, doloribus quasi rerum aliquid soluta fugiat aperiam sint! Suscipit sint voluptates esse omnis alias perspiciatis laborum harum, vero hic.</p>
-                        </a>
+                        <span class="light">On paras</span>
+                        <strong>Nopsu :D</strong>
                     </li>
                     <li>
-                        <a href="#">
-                            <img src="" alt="Kuvako"/>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam deleniti, aperiam nostrum magni iste inventore odit, quod! Ab inventore, pariatur. Repudiandae at maxime ipsam, deserunt deleniti facilis recusandae numquam quia modi, doloribus quasi rerum aliquid soluta fugiat aperiam sint! Suscipit sint voluptates esse omnis alias perspiciatis laborum harum, vero hic.</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="Kuvako"/>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam deleniti, aperiam nostrum magni iste inventore odit, quod! Ab inventore, pariatur. Repudiandae at maxime ipsam, deserunt deleniti facilis recusandae numquam quia modi, doloribus quasi rerum aliquid soluta fugiat aperiam sint! Suscipit sint voluptates esse omnis alias perspiciatis laborum harum, vero hic.</p>
-                        </a>
-                    </li>
-                     <li>
-                        <a href="#">
-                            <img src="" alt="Kuvako"/>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam deleniti, aperiam nostrum magni iste inventore odit, quod! Ab inventore, pariatur. Repudiandae at maxime ipsam, deserunt deleniti facilis recusandae numquam quia modi, doloribus quasi rerum aliquid soluta fugiat aperiam sint! Suscipit sint voluptates esse omnis alias perspiciatis laborum harum, vero hic.</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="Kuvako"/>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam deleniti, aperiam nostrum magni iste inventore odit, quod! Ab inventore, pariatur. Repudiandae at maxime ipsam, deserunt deleniti facilis recusandae numquam quia modi, doloribus quasi rerum aliquid soluta fugiat aperiam sint! Suscipit sint voluptates esse omnis alias perspiciatis laborum harum, vero hic.</p>
-                        </a>
+                        <span class="light">Ja</span>
+                        <strong>Viina :D</strong>
                     </li>
                 </ul>
             </div>
-        </div>
     </div>
 @stop

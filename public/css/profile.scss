@@ -84,6 +84,20 @@
     margin-top: 50px;
 }
 
+#profile .left {
+    width: 70%;
+}
+
+#profile .right {
+    width: 28%;
+    margin: 10px;
+}
+
+#profile .left, #profile .right {
+    float: left;
+}
+
+
 @media screen and (max-width:768px) {
     #header_txt {
         padding: 0 30px;

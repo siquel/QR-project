@@ -40,6 +40,82 @@ a {
 #side_open {
   display: none; }
 
+.button {
+  background-color: #fff;
+  border: 1px solid #bdbdbc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: #4f3b3b;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  text-shadow: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+
+.button span {
+  font-family: "liga";
+  font-size: 16px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  width: 25px;
+  margin: 5px 10px 0 0; }
+
+.button:hover {
+  background-color: #bdbdbc;
+  border: 1px solid #5c5c5c; }
+
+.pull-right {
+  float: right !important; }
+
+div.panel {
+  margin-bottom: 18px;
+  border: 1px solid #bdbdbc; }
+
+div.panel ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0; }
+
+div.panel li:after {
+  clear: both;
+  content: " ";
+  display: table; }
+
+div.panel li {
+  min-height: 20px;
+  padding: 10px 15px; }
+
+div.panel li:hover {
+  background-color: #f4d37a; }
+
+div.panel li:last-child {
+  border-bottom: medium none; }
+
+div.panel-heading {
+  background-color: #bdbdbc;
+  font-size: 14px;
+  line-height: 18px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 10px 15px; }
+
+.light {
+  font-size: 13px;
+  color: #bdbdbc; }
+
+div.panel strong {
+  font-weight: bold;
+  font-size: 13px; }
+
 @media screen and (max-width: 900px) {
   #colTwo, #colTwo > div {
     display: block; }
@@ -145,6 +221,16 @@ a {
 
 #profile .content-header {
   margin-top: 50px; }
+
+#profile .left {
+  width: 70%; }
+
+#profile .right {
+  width: 28%;
+  margin: 10px; }
+
+#profile .left, #profile .right {
+  float: left; }
 
 @media screen and (max-width: 768px) {
   #header_txt {

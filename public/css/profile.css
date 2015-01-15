@@ -227,7 +227,7 @@ div.panel strong {
 
 #profile .right {
   width: 28%;
-  margin: 10px; }
+  margin: 0 0 0 10px; }
 
 #profile .left, #profile .right {
   float: left; }

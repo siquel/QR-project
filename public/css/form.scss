@@ -51,3 +51,44 @@ div.ui_form_text span+textarea{
 	margin: 0;
 	padding-left: 35px;
 }
+
+input.form-control {
+	@include boxShadow(none);
+	border: 1px solid $lightGray;
+	display: block;
+	font-size: 13px;
+	height: 32px;
+	line-height: 1.48257;
+	padding: 6px 12px;
+	width: 100%;
+	vertical-align: middle;
+	@include transition(border-color box-shadow 0.3s);
+	@include borderRadius(4px);
+	@include boxSizing();
+}
+
+.form-control:focus {
+	border-color: $darkYellow;
+	@include boxShadow(0 1px 1px rgba(0, 0, 0, 0.075) inset 0 1px 8px rgba(red($darkYellow), green($darkYellow), blue($darkYellow), 0.6));
+	@include boxShadow(0 1px 8px rgba(red($darkYellow), green($darkYellow), blue($darkYellow), 0.6));
+	outline: 0 none;
+}
+
+input[type="submit"].save {
+    padding: 10px 20px;
+    display: inline-block;
+    background: #FFF;
+    font-size: 15px;
+    color: $textOne;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+     @include borderRadius(10px);
+    @include transition(all .3s);
+}
+
+input[type="submit"].save:hover {
+    background: $darkYellow;
+    color: $textTwo;
+}

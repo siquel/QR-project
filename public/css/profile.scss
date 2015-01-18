@@ -40,7 +40,6 @@
 
 #profile_main {
     width: 100%;
-    background: $lightGray;
     float:left;
 }
 
@@ -52,13 +51,18 @@
 
 #left {
     padding: 30px;
+    float: left;
+}
+
+#right {
+    padding: 30px;
 }
 
 #left h2 {
     margin: 0;
     padding: 0;
     line-height: 100%;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: normal;
 }
 
@@ -69,9 +73,6 @@
     font-size: 14px;
 }
 
-#right {
-    background: $brown;
-}
 
 
 #profile .content {
@@ -82,19 +83,6 @@
 
 #profile .content-header {
     margin-top: 50px;
-}
-
-#profile .left {
-    width: 70%;
-}
-
-#profile .right {
-    width: 28%;
-    margin: 0 0 0 10px;
-}
-
-#profile .left, #profile .right {
-    float: left;
 }
 
 

@@ -17,6 +17,7 @@ Route::group(array('before' => 'auth'), function() {
 	Route::resource('event', 'EventController');
 	Route::resource('question', 'QuestionController', array('except' => array('index')));
 	Route::get('logout', array('as' => 'logout', 'uses' => 'LoginController@logout'));
+	Route::resource('teams', 'TeamsController');
     Route::get('/', function()
     {
         return View::make('index');

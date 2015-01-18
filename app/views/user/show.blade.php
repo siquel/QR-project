@@ -12,7 +12,17 @@
         <small>Member since XX</small>
         <div></div>
         <h2>Teams:</h2>
-        <a href="#">Klux Klux Klan</a>
+            @if (count($user->teams) === 0)
+                <p>No teams</p>
+            @else
+                <ul>
+                    @foreach($user->teams as $team)
+                        <li>
+                            <a href="#">{{ $team->name }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+            @endif
         <hr>
         <div class="activity">
             <h4>Activity:</h4>ööää

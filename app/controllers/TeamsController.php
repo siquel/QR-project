@@ -1,22 +1,21 @@
 <?php
 
-class UserController extends \BaseController {
+class TeamsController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
+	 * GET /teams
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		$users = User::all();
-
-		return View::make('user.index', compact('users'));
+		//
 	}
-
 
 	/**
 	 * Show the form for creating a new resource.
+	 * GET /teams/create
 	 *
 	 * @return Response
 	 */
@@ -25,9 +24,9 @@ class UserController extends \BaseController {
 		//
 	}
 
-
 	/**
 	 * Store a newly created resource in storage.
+	 * POST /teams
 	 *
 	 * @return Response
 	 */
@@ -36,58 +35,45 @@ class UserController extends \BaseController {
 		//
 	}
 
-
 	/**
 	 * Display the specified resource.
+	 * GET /teams/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function show($id)
 	{
-		$user = User::with('teams')->find($id);
-		return View::make('user.show', compact('user'));
+		//
 	}
-
 
 	/**
 	 * Show the form for editing the specified resource.
+	 * GET /teams/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function edit($id)
 	{
-		$user = User::find($id);
-
-		return View::make('user.edit', compact('user'));
+		//
 	}
-
 
 	/**
 	 * Update the specified resource in storage.
+	 * PUT /teams/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
 	public function update($id)
 	{
-		$user = User::find($id);
-		// we need to skip validation for username
-		$validator = Validator::make($data = Input::all(), User::rules($user->id));
-
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
-		}
-
-		$user->update($data);
-		return Redirect::route("user.show", $user->id);
+		//
 	}
-
 
 	/**
 	 * Remove the specified resource from storage.
+	 * DELETE /teams/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -96,6 +82,5 @@ class UserController extends \BaseController {
 	{
 		//
 	}
-
 
 }

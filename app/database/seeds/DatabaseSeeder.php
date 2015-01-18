@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('QuestionsTableSeeder');
 		$this->call('EventsTableSeeder');
+		$this->call('TeamsTableSeeder');
+		$this->call('UsersTeamsTableSeeder');
 	}
 
 }

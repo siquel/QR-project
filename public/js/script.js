@@ -83,5 +83,32 @@ $(function() {
         $('.fc-button-prev, .fc-button-next').on('click', function() {
             $().getMenu();
         });
+    } else if ($('html').attr('id') == 'question') {
+        new Dropkick("#results", {
+            mobile: true,
+            initialize: function() {
+                var $input;
+                dk = this;
+                $input = $('#search');
+                console.log($input);
+                $input.on("keypress keyup", function(e) {
+                    var found = dk.search(this.value, dk.data.settings.search);
+                    e.stopPropagation();
+                    $('.dk-option', dk.data.elem).remove();
+
+                    if (found.length) {
+                        $(found).appendTo(dk.data.elem.lastChild);
+                        dk.selectOne(found[0]);
+                    } else {
+                        $( "<li></li>" ).addClass( "dk-option dk-option-disabled" ).text( "Not Found" ).appendTo( dk.data.elem.lastChild );
+                    }
+
+                    found.length && dk.selectOne( found[0] );
+                });
+            }
+        });
+
+
     }
+
 });

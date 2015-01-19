@@ -50,46 +50,49 @@
   display: block;
   left: 0; }
 
-.dk-select-open-up .dk-select-options {
-  border-radius: 0.4em 0.4em 0 0;
-  margin-bottom: -1px;
-  bottom: 100%; }
-
-.dk-select-open-down .dk-select-options {
-  border-radius: 0 0 0.4em 0.4em;
-  
-  top: 100%; }
 
 .dk-select-multi .dk-select-options {
   max-height: 10em; }
 
 .dk-select-options {
+  background: $cream;
   width: 100%;
   z-index: 100;
-  background-color: white;
   border: 1px solid #CCCCCC;
-  border-radius: 0.4em;
   overflow-x: hidden;
   overflow-y: auto;
   
   list-style: none;
-  padding: 0.25em 0;
-  margin: 0; }
+  padding: 0;
+  margin:0;
+}
 
 .dk-option-selected {
-  background-color: #3297fd;
-  color: #fff; }
+      background: $brown;
+    color: #fff !important;
+}
 
 .dk-select-options-highlight .dk-option-highlight {
-  background-color: transparent;
-  color: inherit; }
+      background: $brown;
+    color: #fff;
+}
 
 .dk-option {
-  padding: 0 0.5em; }
+    display: block;
+    width: 100%;
+    padding: 20px;
+    color: $textOne;
+    font-size: 14px;
+    line-height: 150%;
+    border-bottom: 1px solid $lightGray;
+    @include boxSizing();
+    @include transition(all .3s);
+}
 
 .dk-select-options .dk-option-highlight {
-  background-color: #3297fd;
-  color: #fff; }
+    background: $brown;
+    color: #fff;
+}
 
 .dk-select-options .dk-option-disabled {
   color: #BBBBBB;

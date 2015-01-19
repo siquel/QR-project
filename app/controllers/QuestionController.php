@@ -1,5 +1,5 @@
 <?php
-
+use Carbon\Carbon;
 class QuestionController extends \BaseController {
 
 
@@ -11,7 +11,9 @@ class QuestionController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('question.create');
+		$dt = Carbon::now()->toDateTimeString();
+		$events = MyEvent::where('start', '>', $dt)->get();
+		return View::make('question.create', compact('events'));
 	}
 
 	/**

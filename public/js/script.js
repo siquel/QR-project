@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
     $('#header_open').on('click', function() {
         $('#header').toggleClass('open');
     });
@@ -102,9 +102,21 @@ $(function() {
                     } else {
                         $( "<li></li>" ).addClass( "dk-option dk-option-disabled" ).text( "Not Found" ).appendTo( dk.data.elem.lastChild );
                     }
-
+                    console.log("here");
                     found.length && dk.selectOne( found[0] );
                 });
+
+                var ul = $('ul#dk0-listbox');
+                ul.mouseleave(function() {
+                    var li = ul.find('.dk-option-highlight');
+                    if (typeof li !== "undefined") {
+                        li.removeClass('dk-option-highlight');
+                    }
+                });
+            },
+            change: function() {
+                //var s = this.data.select;
+                //console.log(dk.form);
             }
         });
 

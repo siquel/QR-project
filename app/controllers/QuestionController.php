@@ -22,7 +22,7 @@ class QuestionController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		dd(Input::all());
 	}
 
 	/**

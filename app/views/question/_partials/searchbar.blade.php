@@ -7,9 +7,9 @@
 			<span>#</span>
 			<input type="text" id="search"/>
 			@yield('events')
-			<select id="results" size="6" tabindex="2" multiple="" >
+			<select name="event" id="results" size="6" tabindex="2" >
 			 <option value="AL">Alabama</option>
-				<option value="AK">Alaska</option>
+				<option selected value="AK">Alaska</option>
 				<option value="AZ">Arizona</option>
 				<option value="AR">Arkansas</option>
 				<option value="CA">California</option>

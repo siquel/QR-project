@@ -1,0 +1,71 @@
+@import 'Import';
+
+
+#question body {
+	background: $cream;
+}
+
+.content {
+	@include boxShadow(-1px -1px 3px rgba(0,0,0, .2));
+	padding: 30px;
+}
+
+#question #menu_side {
+	width: 400px;
+	background: $cream;
+}
+
+#search_wrapper {
+	margin-top: 50px;
+	position: absolute;
+}
+
+#question #sub_menu{
+	background: $cream;
+}
+
+#question #sub_menu > span {
+	position: absolute;
+	left: 0;
+    margin-left: 10px;
+    line-height: 59px;
+    font-family: "liga";
+    font-size: 20px;
+}
+
+#question #sub_menu input {
+    width: 100%;
+    margin: 0;
+    padding: 0 10px 0 40px;
+    line-height: 59px;
+    border: none;
+    border-right: 1px solid $lightGray;
+    border-bottom: 1px solid $lightGray;
+    font-size: 15px;
+    background: transparent;
+    outline: none;
+    color: $textOne;
+    @include boxSizing();
+}
+
+#question #sub_menu a {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    color: $textOne;
+    font-size: 14px;
+    line-height: 150%;
+    border-bottom: 1px solid $lightGray;
+    @include boxSizing();
+    @include transition(all .3s);
+}
+
+#question #sub_menu a:hover {
+    background: $brown;
+    color: $textTwo;
+}
+
+#question #sub_menu a strong {
+    display: block;
+    clear: both;
+}

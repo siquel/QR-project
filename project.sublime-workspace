@@ -50,10 +50,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/C/xampp/htdocs/laravel"
-	],
 	"file_history":
 	[
 		"/C/xampp/htdocs/laravel/project",
@@ -168,7 +164,6 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},

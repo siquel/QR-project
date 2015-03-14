@@ -155,6 +155,521 @@ div.panel strong {
 
   #sub_menu.sub_open {
     display: block; } }
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Helvetica", arial;
+  font-weight: normal;
+  font-size: 16px;
+  color: #4f3b3b; }
+
+a {
+  text-decoration: none; }
+
+@font-face {
+  font-family: 'liga';
+  src: url("../font/websymbolsligaregular-webfont-webfont.eot");
+  src: url("../font/websymbolsligaregular-webfont-webfont.eot?#iefix") format("embedded-opentype"), url("../font/websymbolsligaregular-webfont-webfont.woff") format("woff"), url("../font/websymbolsligaregular-webfont-webfont.ttf") format("truetype"), url("../font/websymbolsligaregular-webfont-webfont.svg#web_symbols_ligaregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+#colTwo {
+  display: table;
+  position: absolute;
+  z-index: -1;
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+#colTwo > div {
+  display: table-cell;
+  vertical-align: top;
+  height: 100%; }
+
+#menu_side {
+  width: 300px;
+  background: #4f3b3b; }
+
+#side_open {
+  display: none; }
+
+.button {
+  background-color: #fff;
+  border: 1px solid #bdbdbc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: #4f3b3b;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  text-shadow: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+
+.button span {
+  font-family: "liga";
+  font-size: 16px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  width: 25px;
+  margin: 5px 10px 0 0; }
+
+.button:hover {
+  background-color: #bdbdbc;
+  border: 1px solid #5c5c5c; }
+
+.pull-right {
+  float: right !important; }
+
+div.panel {
+  margin-bottom: 18px;
+  border: 1px solid #bdbdbc; }
+
+div.panel ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0; }
+
+div.panel li:after {
+  clear: both;
+  content: " ";
+  display: table; }
+
+div.panel li {
+  min-height: 20px;
+  padding: 10px 15px; }
+
+div.panel li:hover {
+  background-color: #f4d37a; }
+
+div.panel li:last-child {
+  border-bottom: medium none; }
+
+div.panel-heading {
+  background-color: #bdbdbc;
+  font-size: 14px;
+  line-height: 18px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 10px 15px; }
+
+.light {
+  font-size: 13px;
+  color: #bdbdbc; }
+
+div.panel strong {
+  font-weight: bold;
+  font-size: 13px; }
+
+@media screen and (max-width: 900px) {
+  #colTwo, #colTwo > div {
+    display: block; }
+
+  #colTwo #menu_side, html#events #menu_side {
+    float: left;
+    width: 100%;
+    height: auto; }
+
+  #side_open {
+    display: block;
+    float: left;
+    width: 100%;
+    line-height: 50px;
+    color: #4f3b3b;
+    background: #f0e9dd;
+    border-bottom: 1px solid #bdbdbc;
+    text-align: center;
+    font-size: 16px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+
+  #side_open span {
+    font-family: "liga";
+    float: left;
+    width: 20px;
+    font-size: 25px;
+    padding-left: 20px; }
+
+  #side_open:hover {
+    background: #f4d37a; }
+
+  #sub_menu {
+    display: none; }
+
+  #sub_menu.sub_open {
+    display: block; } }
+/*hax */
+body #header_open {
+  display: none;
+  background: #4f3b3b;
+  text-align: center; }
+
+#header {
+  float: left;
+  width: 100%;
+  background: #4f3b3b; }
+
+#header a, #header_open {
+  display: inline-block;
+  float: left;
+  padding: 0 15px;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+#header a:first-child {
+  padding-left: 20px; }
+
+#header a:last-child {
+  padding-right: 20px;
+  float: right; }
+
+#header span {
+  font-family: "liga";
+  padding-right: 7px; }
+
+#header a:hover, body #header_open:hover {
+  background: #f4d37a;
+  color: #4f3b3b; }
+
+#header em {
+  display: inline-block;
+  position: absolute;
+  line-height: 12px;
+  padding: 0 3px;
+  margin: 12px 0 0 -12px;
+  background: #e56655;
+  color: #fff;
+  text-align: center;
+  font-style: normal;
+  font-size: 9px;
+  font-weight: bold;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); }
+
+#header_open span {
+  font-family: "liga";
+  font-size: 30px;
+  float: left; }
+
+@media screen and (max-width: 460px) {
+  #header a, #header_open {
+    width: 100%;
+    clear: both;
+    border-bottom: 1px solid #361c12;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  #header a:last-child, #header a:first-child {
+    float: left;
+    padding: 0 15px; }
+
+  #header span {
+    display: inline-block;
+    width: 20px;
+    text-align: center; }
+
+  body #header_open {
+    display: block; }
+
+  #header.open {
+    display: block; }
+
+  #header {
+    display: none; } }
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Helvetica", arial;
+  font-weight: normal;
+  font-size: 16px;
+  color: #4f3b3b; }
+
+a {
+  text-decoration: none; }
+
+@font-face {
+  font-family: 'liga';
+  src: url("../font/websymbolsligaregular-webfont-webfont.eot");
+  src: url("../font/websymbolsligaregular-webfont-webfont.eot?#iefix") format("embedded-opentype"), url("../font/websymbolsligaregular-webfont-webfont.woff") format("woff"), url("../font/websymbolsligaregular-webfont-webfont.ttf") format("truetype"), url("../font/websymbolsligaregular-webfont-webfont.svg#web_symbols_ligaregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+#colTwo {
+  display: table;
+  position: absolute;
+  z-index: -1;
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+#colTwo > div {
+  display: table-cell;
+  vertical-align: top;
+  height: 100%; }
+
+#menu_side {
+  width: 300px;
+  background: #4f3b3b; }
+
+#side_open {
+  display: none; }
+
+.button {
+  background-color: #fff;
+  border: 1px solid #bdbdbc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: #4f3b3b;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  text-shadow: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+
+.button span {
+  font-family: "liga";
+  font-size: 16px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  width: 25px;
+  margin: 5px 10px 0 0; }
+
+.button:hover {
+  background-color: #bdbdbc;
+  border: 1px solid #5c5c5c; }
+
+.pull-right {
+  float: right !important; }
+
+div.panel {
+  margin-bottom: 18px;
+  border: 1px solid #bdbdbc; }
+
+div.panel ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0; }
+
+div.panel li:after {
+  clear: both;
+  content: " ";
+  display: table; }
+
+div.panel li {
+  min-height: 20px;
+  padding: 10px 15px; }
+
+div.panel li:hover {
+  background-color: #f4d37a; }
+
+div.panel li:last-child {
+  border-bottom: medium none; }
+
+div.panel-heading {
+  background-color: #bdbdbc;
+  font-size: 14px;
+  line-height: 18px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 10px 15px; }
+
+.light {
+  font-size: 13px;
+  color: #bdbdbc; }
+
+div.panel strong {
+  font-weight: bold;
+  font-size: 13px; }
+
+@media screen and (max-width: 900px) {
+  #colTwo, #colTwo > div {
+    display: block; }
+
+  #colTwo #menu_side, html#events #menu_side {
+    float: left;
+    width: 100%;
+    height: auto; }
+
+  #side_open {
+    display: block;
+    float: left;
+    width: 100%;
+    line-height: 50px;
+    color: #4f3b3b;
+    background: #f0e9dd;
+    border-bottom: 1px solid #bdbdbc;
+    text-align: center;
+    font-size: 16px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+
+  #side_open span {
+    font-family: "liga";
+    float: left;
+    width: 20px;
+    font-size: 25px;
+    padding-left: 20px; }
+
+  #side_open:hover {
+    background: #f4d37a; }
+
+  #sub_menu {
+    display: none; }
+
+  #sub_menu.sub_open {
+    display: block; } }
+input.ui_form, div.ui_form input,
+textarea.ui_form_text, div.ui_form_text textarea {
+  -webkit-font-smoothing: antialiased;
+  outline: none;
+  border: none;
+  background: #4f3b3b;
+  color: #fff;
+  font-size: .9em;
+  line-height: 25px;
+  resize: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+input.ui_form, div.ui_form input {
+  padding: 5px 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; }
+
+.ui_form span + input {
+  padding-left: 35px;
+  margin: 0; }
+
+.ui_form span {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  margin: 5px 0 0 5px;
+  background: #f4d37a;
+  color: #4f3b3b;
+  text-align: center;
+  font-family: "liga";
+  font-size: 16px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%; }
+
+textarea.ui_form_text, div.ui_form_text textarea {
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+div.ui_form_text span {
+  display: block;
+  position: absolute;
+  color: #f4d37a;
+  font-family: "liga";
+  margin: 10px 0 0 10px; }
+
+div.ui_form_text span + textarea {
+  margin: 0;
+  padding-left: 35px; }
+
+input.form-control {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #bdbdbc;
+  display: block;
+  font-size: 13px;
+  height: 32px;
+  line-height: 1.48257;
+  padding: 6px 12px;
+  width: 100%;
+  vertical-align: middle;
+  -webkit-transition: border-color box-shadow 0.3s;
+  -moz-transition: border-color box-shadow 0.3s;
+  -o-transition: border-color box-shadow 0.3s;
+  transition: border-color box-shadow 0.3s;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.form-control:focus {
+  border-color: #cd9c50;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset 0 1px 8px rgba(205, 156, 80, 0.6);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset 0 1px 8px rgba(205, 156, 80, 0.6);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset 0 1px 8px rgba(205, 156, 80, 0.6);
+  -moz-box-shadow: 0 1px 8px rgba(205, 156, 80, 0.6);
+  -webkit-box-shadow: 0 1px 8px rgba(205, 156, 80, 0.6);
+  box-shadow: 0 1px 8px rgba(205, 156, 80, 0.6);
+  outline: 0 none; }
+
+input[type="submit"].save {
+  padding: 10px 20px;
+  display: inline-block;
+  background: #FFF;
+  font-size: 15px;
+  color: #4f3b3b;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+input[type="submit"].save:hover {
+  background: #cd9c50;
+  color: #fff; }
+
 #question body {
   background: #f0e9dd; }
 
@@ -222,5 +737,50 @@ div.panel strong {
 #question #sub_menu a strong {
   display: block;
   clear: both; }
+
+#question .btn {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-color: #f5f5f5;
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border-color: #cccccc #cccccc #b3b3b3;
+  border-image: none;
+  border-radius: 0.25em;
+  border-style: solid;
+  border-width: 0.0625em;
+  box-shadow: 0 0.0625em 0 rgba(255, 255, 255, 0.2) inset, 0 0.0625em 0.125em rgba(0, 0, 0, 0.05);
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  margin-bottom: 0;
+  padding: 0.36em 0.75em;
+  text-align: center;
+  text-shadow: 0 0.0625em 0.0625em rgba(255, 255, 255, 0.75);
+  vertical-align: middle; }
+
+#question .btn-danger {
+  background-color: #da4f49;
+  background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  text-shadow: 0 -0.0625em 0 rgba(0, 0, 0, 0.25);
+  padding: 0.36em 0.85em; }
+
+#question .form-control {
+  width: 100%; }
+
+#question .field .form-control {
+  /*width: 92%;*/
+  display: inline-block; }
+
+#question .field .btn {
+  position: absolute;
+  right: 30px; }
 
 /*# sourceMappingURL=question.css.map */

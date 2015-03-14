@@ -1,4 +1,8 @@
 @extends('question._layouts.default')
+@section('head')
+	<link rel="stylesheet" type="text/css" href="/css/nav_list.css">
+	<link rel="stylesheet" type="text/css" href="/css/dropkick.css">
+@stop
 @section('content')
 	{{ Form::open(array('route' => 'question.store')) }}
 <div id="colTwo">
@@ -10,4 +14,8 @@
 </div>
 </div>
 	{{ Form::close() }}
+
+<script src="/js/jquery.js"></script>
+<script src="/js/dropkick.js"></script>
+<script src="/js/script.js"></script>
 @stop

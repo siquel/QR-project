@@ -119,8 +119,18 @@ $(document).ready(function() {
                 //console.log(dk.form);
             }
         });
-
-
     }
+
+   $("div.form-group").on('click', '.add-more', function(e) {
+    $(this).removeClass('add-more').addClass('remove-this btn-danger').text("-");
+    var group = $("div.form-group").last();
+    group.append('<div class="field">\
+                    <input type="text" class="form-control" name="answer[]" />\
+                    <button type="button" class="btn add-more remove-me">+</button>\
+                    </div>');
+    });
+   $('div.form-group').on('click', '.remove-this', function(e) {
+    $(this).parent().remove();
+   });
 
 });

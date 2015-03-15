@@ -62,7 +62,33 @@ class QuestionController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$deleted = Input::get('deleted_id');
+		$answers = Input::get('answer');
+		$answerIds = Input::get('answer_id');
+		for ($i = 0; $i < count($answerIds); $i++) {
+			if (!$answerIds[$i]) {
+				Answer::create([
+					'answer' => $answers[$i],
+					'correct' => 0, // todo fix
+					'question_id' => $id
+					]);
+			} else {
+				$answer = Answer::find($answerIds[$i]);
+				$data = array('answer' => $answers[$i]);
+				$answer->update($data);
+			}
+		}
+
+
+		if (!is_null($deleted)) {
+			for ($i = 0; $i < count($deleted); $i++) {
+				if ($deleted[$i]) {
+					Answer::destroy($deleted[$i]);
+				}
+			}
+		}
+		// TODO debug
+		return Redirect::route("question.edit", $id);
 	}
 
 	/**

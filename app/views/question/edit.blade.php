@@ -1,7 +1,7 @@
 @extends('question._layouts.default')
 @section('content')
 <div class="content">
-	{{ Form::model($question, array()) }}
+	{{ Form::model($question, array('route' => array('question.update', $question->id), 'method' => 'PUT')) }}
 	<div class="form-group">
 		{{ Form::label('question', 'Question')}}
 		{{ Form::text('question', Input::old('question'), array('class' => 'form-control')) }}
@@ -14,6 +14,7 @@
 			<div class="field">
 				{{ Form::text('answer[]', Input::old('answer'), array('class' => 'form-control')) }}
 				{{ Form::button('+', array('class' => 'btn add-more')) }}
+				{{ Form::hidden('answer_id[]', 0) }}
 			</div>
 		</div>
 		@else
@@ -27,10 +28,14 @@
 					{{ Form::text('answer[]', $answer->answer, array('class' => 'form-control')) }}
 					{{ Form::button('-', array('class' => 'btn remove-this btn-danger')) }}
 				@endif
+				{{ Form::hidden('answer_id[]', $answer->id) }}
 			</div>
 			<?php $i++ ?>
 		@endforeach
 		@endif
+	</div>
+	<div class="form-actions">
+	{{ Form::submit('Save changes', array('class' => 'save')) }}
 	</div>
 	{{ Form::close() }}
 </div>

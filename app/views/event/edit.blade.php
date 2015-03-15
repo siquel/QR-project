@@ -7,6 +7,8 @@
 {{ Form::text('description') }}
 {{ Form::label('start', 'Start time') }}
 {{ Form::text('start') }}
-{{ Form::submit('Save!')}}
+<div class="form-actions">
+	{{ Form::submit('Save changes', array('class' => 'save')) }}
+</div>}
 {{ Form::close() }}
 @stop

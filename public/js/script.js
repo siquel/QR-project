@@ -129,9 +129,13 @@ $(document).ready(function() {
         group.append('<div class="field">\
                         <input type="text" class="form-control" name="answer[]" />\
                         <button type="button" class="btn add-more remove-me">+</button>\
+                        <input type="hidden" name="answer_id[]" value="0" />\
                         </div>');
         });
        $('div.form-group').on('click', '.remove-this', function(e) {
+        var deleted = $(this).next().attr('value');
+        var container = $(this).parent().parent();
+        container.append('<input type="hidden" name="deleted_id[]" value="' + deleted + '" />');
         $(this).parent().remove();
        });
     }

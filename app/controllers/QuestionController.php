@@ -49,7 +49,7 @@ class QuestionController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$question = Question::find($id);
+		$question = Question::with('answers')->get()->find($id);
 		return View::make('question.edit', compact('question'));
 	}
 

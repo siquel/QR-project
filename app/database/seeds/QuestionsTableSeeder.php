@@ -13,8 +13,8 @@ class QuestionsTableSeeder extends Seeder {
 		{
 			Question::create([
                                             'question' => $faker->realText(50),
-                                            'answer' => $faker->sentence(1),
-                                            'points' => $faker->randomElement(array(1,3,5)),
+                                            //'answer' => $faker->sentence(1),
+                                            //'points' => $faker->randomElement(array(1,3,5)),
                                             'event_id' => rand(1,2),
                                             'user_id' => rand(1,5)
 			]);

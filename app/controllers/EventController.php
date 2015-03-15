@@ -57,7 +57,8 @@ class EventController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$event = MyEvent::find($id);
+		return View::make('event.edit', compact('event'));
 	}
 
 
@@ -69,7 +70,15 @@ class EventController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$event = MyEvent::find($id);
+		$validator = Validator::make($data = Input::all(), MyEvent::$rules);
+
+		if ($validator->fails()) {
+			dd($validator->messages());
+			return Redirect::back()->withErrors($validator)->withInput();
+		}
+		$event->update($data);
+		return Redirect::route("event.show", $event->id);
 	}
 
 

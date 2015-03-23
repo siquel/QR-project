@@ -3,6 +3,11 @@ use Carbon\Carbon;
 class QuestionController extends \BaseController {
 
 
+	public function quiz()
+	{
+		dd(Input::all());
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 * GET /question/create
@@ -62,6 +67,10 @@ class QuestionController extends \BaseController {
 	 */
 	public function update($id)
 	{
+		$question = Question::find($id);
+
+		$question->update(array('question' => Input::get('question') ));
+
 		$deleted = Input::get('deleted_id');
 		$answers = Input::get('answer');
 		$answerIds = Input::get('answer_id');

@@ -4,15 +4,18 @@
 @stop
 @section('content')
 <div data-role="content">
-{{ Form::model($question, array()) }}
 	<fieldset data-role="controlgroup">
-		<legend>{{{ $question->question }}}</legend>
-		@foreach ($question->answers as $answer)
-		{{ Form::radio('choice', $answer->id, false, array('id' => "ans$answer->id")) }}
-		{{ Form::label("ans$answer->id", $answer->answer )}}
-		@endforeach
-	</fieldset>
+		{{ Form::open(array('route' => array('answer.quiz'), 'method' => 'get')) }}
+
+			<legend>{{ $question['question'] }}</legend>
+			
+			@foreach ($question->answers as $answer)
+				{{ Form::radio('choice', $answer->id, false, array('id' => "ans$answer->id")) }}
+				{{ Form::label("ans$answer->id", $answer->answer )}}
+			@endforeach
+		{{ Form::submit('Submit!', array('class' => 'save')) }}
 {{ Form::close() }}
+	</fieldset>
 </div>   
 <script src="/js/jquery.js"></script>
 <script src="/js/jquery.mobile.js"></script>

@@ -2,7 +2,7 @@
 
 class Question extends \Eloquent {
     protected $table = 'questions';
-    protected $fillable = [];
+    protected $fillable = ['question'];
 
 
     public static $rules = [

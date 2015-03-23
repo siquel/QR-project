@@ -16,14 +16,21 @@ Route::group(array('before' => 'auth'), function() {
 	Route::resource('user', 'UserController');
 	Route::resource('event', 'EventController');
 	Route::resource('question', 'QuestionController', array('except' => array('index')));
+
+	Route::group(array('prefix' => 'answer'), function() {
+		Route::get('quiz', array('as' => 'answer.quiz', 'uses' => 'QuestionController@quiz'));
+	});
+	
 	Route::get('logout', array('as' => 'logout', 'uses' => 'LoginController@logout'));
 	Route::resource('teams', 'TeamsController');
-    Route::get('/', function()
+    Route::post('/', function()
     {
         return View::make('index');
     });
 });
-
+Route::get('/', function() {
+	return Redirect::route('login');
+})->before('guest');
 Route::get('login', array('uses' => 'LoginController@show', 'as' => 'login.show'))->before('guest'); // don't allow login again
 Route::post('login', array('before' => 'csrf', 'as' => 'login', 'uses' => 'LoginController@login'));
 

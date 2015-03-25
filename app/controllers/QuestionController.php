@@ -5,7 +5,28 @@ class QuestionController extends \BaseController {
 
 	public function quiz()
 	{
-		dd(Input::all());
+		if (is_null(Input::get('choice'))) return;
+
+		$user = Auth::user();
+		/*$team = $user->teams()->with(['events' => function($query) {
+			$query->where('event_id', '=', Input::get('event'));
+		}])->get();*/
+		$team = $user->teams()->whereHas('events', function($q) {
+			$q->where('event_id', '=', Input::get('event'));
+		})->get()->first();
+
+		if (is_null($team)) return "null"; //View::make()
+
+		// vastattu jo
+		$ans = $team->answered()->where('answer_id', '=', Input::get('choice'))->get()->first();
+		if (!is_null($ans))  return "ans not null"; // View::make()
+
+		$count = $team->answered()->where('question_id', '=', Input::get('q'))->count();
+		$team->answered()->attach(Input::get('choice'));
+		//$team = Team::with('events')->get()->where('event_id', '=', Input::get('event'))->get();
+		$queries = DB::getQueryLog();
+		$last_query = end($queries);
+		dd($last_query);
 	}
 
 	/**
@@ -29,7 +50,24 @@ class QuestionController extends \BaseController {
 	 */
 	public function store()
 	{
-		dd(Input::all());
+
+		$answers = Input::get('answer');
+
+		$question = Question::create([
+			'question' => Input::get('question'),
+			'event_id' => Input::get('event'), 
+			'user_id' => Auth::id()
+			]);
+
+		for ($i = 0; $i < count($answers); $i++) {
+			Answer::create([
+				'answer' => $answers[$i],
+				'question_id' => $question->id,
+				'correct' => 0 // todo fix
+				]);
+		}
+
+		return Redirect::route('question.edit', $question->id);
 	}
 
 	/**

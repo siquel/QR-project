@@ -8,4 +8,8 @@ class Answer extends \Eloquent {
     	return $this->belongsTo('Question');
     }
 
+    public function teamsWhoAnswered() {
+    	return $this->belongsToMany('Team');
+    }
+
 }

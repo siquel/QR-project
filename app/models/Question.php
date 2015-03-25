@@ -2,13 +2,11 @@
 
 class Question extends \Eloquent {
     protected $table = 'questions';
-    protected $fillable = ['question'];
+    protected $fillable = ['question', 'event_id', 'user_id'];
 
 
     public static $rules = [
         'question' => 'required',
-        'answer' => 'required',
-        'points' => 'integer',
         'event_id' => 'integer',
         'user_id' => 'integer'
     ];

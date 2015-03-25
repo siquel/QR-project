@@ -13,6 +13,8 @@
 				{{ Form::radio('choice', $answer->id, false, array('id' => "ans$answer->id")) }}
 				{{ Form::label("ans$answer->id", $answer->answer )}}
 			@endforeach
+			<input type="hidden" name="event" value="{{{ $question->event_id }}}" />
+			<input type="hidden" name="q" value="{{{ $question->id }}}" />
 		{{ Form::submit('Submit!', array('class' => 'save')) }}
 {{ Form::close() }}
 	</fieldset>

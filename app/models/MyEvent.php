@@ -19,6 +19,6 @@ class MyEvent extends \Eloquent {
     }
 
     public function teams() {
-        return $this->belongsToMany('Team');
+        return $this->belongsToMany('Team', 'event_team', 'team_id', 'event_id');
     }
 }

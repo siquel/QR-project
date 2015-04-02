@@ -13,5 +13,11 @@
 	<p>
 		Created by <strong>{{{ $event->user->username }}}</strong>
 	</p>
+	<p>Teams</p>
+	<ul>
+	@foreach ($event->teams as $team)
+		<li>{{{ $team->name }}}</li>
+	@endforeach
+	</ul>
 </div>
 @stop
